@@ -1,0 +1,497 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url(//db.onlinewebfonts.com/c/18a4a219f1bac4049a21481d12f18f05?family=Circe+Light);
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --clr-white: #FFff;
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+html {
+    font-family: 'Circe-Light', sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Circe-Light', sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /* letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25; */
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+
+/*  global classes */
+
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+nav {
+    background: var(--clr-white);
+    /* box-shadow: var(--light-shadow); */
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: #666060;
+    transform: rotate(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a {
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+.links a:hover {
+    padding-left: 1.5rem;
+}
+
+.social-icons {
+    display: none;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links {
+    height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links {
+        height: auto;
+        display: flex;
+    }
+    .links a {
+        padding: 0;
+        margin: 0 1.95rem;
+        color: #b1b1b1;
+    }
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+    }
+    .social-icons {
+        display: flex;
+    }
+    .social-icons img {
+        width: 50%;
+    }
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: #b1b1b1;
+        transition: var(--transition);
+    }
+    .social-icons a:hover {
+        color: var(--clr-black);
+    }
+}
+
+
+/* fixed nav */
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+.fixed-nav .links a {
+    color: var(--clr-grey-1);
+}
+
+.fixed-nav .links a:hover {
+    color: var(--clr-secondary);
+}
+
+
+/* .fixed-nav .links-container {
+    height: auto !important;
+  } */
+
+
+/* BANNER SECTION */
+
+.banner {
+    padding: 2rem;
+}
+
+.top-header {
+    font-size: 38px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Circe-Light', sans-serif;
+}
+
+.banner-text {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 280px;
+    text-align: center;
+}
+
+.btns {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+
+.cta {
+    display: inline-block;
+    padding: 14px 52px 14px 30px;
+    padding-right: 45px;
+    border: 2px solid #000;
+    background-color: #000;
+    font-family: 'Circe-Bold', sans-serif;
+    color: #fff;
+    transition: background-color 0.35s, border 0.35s;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background-color: #fff;
+    color: var(--clr-black);
+}
+
+.arro {
+    display: flex;
+    gap: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.banner-hero img {
+    width: 100%;
+    border-style: none;
+    padding-bottom: 2em;
+}
+
+
+/* ORTFOLIO SECTION */
+
+.pr-sector {
+    padding: 2em;
+}
+
+.portfolio-header {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+details {
+    padding: 1rem 0;
+    list-style-type: none;
+}
+
+details:hover {
+    cursor: pointer;
+}
+
+details p {
+    padding-bottom: 1rem;
+    color: #b1b1b1;
+}
+
+details[open] summary {
+    font-weight: 700;
+    color: var(--clr-black);
+    transition: color .5s;
+}
+
+summary {
+    list-style-type: none;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem 0; */
+    font-size: 1rem;
+}
+
+details[open] summary i {
+    transform: rotate(180deg);
+    transition: transform .5s;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+details[open] summary~* {
+    animation: sweep .5s ease-in-out;
+}
+
+.deskimg {
+    display: none;
+}
+
+.mobimg {
+    padding-top: 1em;
+}
+
+.services-sector {
+    padding: 2em;
+}
+
+.service-header {
+    font-size: 30px;
+    line-height: 42px;
+    font-family: 'Circe-Light'sans-serif;
+    font-weight: normal;
+}
+
+.servpara {
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.servpara1 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 12px;
+    text-align: left;
+    opacity: .7;
+    padding-bottom: 2em;
+}
+
+
+/* TAB SECTION  */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.Ar-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    line-height: 22px
+}
+
+.services-list {
+    padding-top: 1rem;
+    list-style: unset;
+    padding-bottom: 1rem;
+    color: #666060;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.Mobile-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.Blockchain-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    line-height: 22px
+}
+
+.VirtualReality-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    line-height: 22px
+}
+
+.Machine-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    line-height: 22px
+}
+
+.lrnmore {
+    color: var(--clr-black);
+}
