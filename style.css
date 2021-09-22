@@ -36,6 +36,7 @@ html {
     font-weight: normal;
     line-height: 1.5;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *,
@@ -51,6 +52,7 @@ body {
     font-weight: normal;
     line-height: 1.5;
     font-size: 0.875rem;
+    overflow-x: hidden;
 }
 
 ul {
@@ -152,7 +154,7 @@ nav {
 }
 
 .logo {
-    height: 40px;
+    height: 22px;
 }
 
 .links a {
@@ -277,7 +279,7 @@ nav {
 
 .btns {
     margin-top: 1em;
-    margin-left: 4em;
+    margin-left: 5em;
 }
 
 .cta {
@@ -494,4 +496,255 @@ details[open] summary~* {
 
 .lrnmore {
     color: var(--clr-black);
+}
+
+
+/* BLOG SECTION */
+
+.casesection {
+    padding: 2em;
+}
+
+.case-header {
+    font-size: 30px;
+    line-height: 42px;
+    font-family: 'Circe-Light'sans-serif;
+    font-weight: normal;
+}
+
+.casepara {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    margin-top: 25px;
+    color: #4b4b4b;
+}
+
+.case-img {
+    padding-top: 2em;
+}
+
+.posture {
+    font-family: 'Circe-Regular', sans-serif;
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 1em;
+}
+
+.info-case {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: #4b4b4b;
+}
+
+.seecase {
+    color: #000;
+    padding-bottom: 1em;
+}
+
+
+/* DEV SECTION */
+
+.devsection {
+    padding: 2em;
+}
+
+.dev-header {
+    font-size: 30px;
+    line-height: 42px;
+    font-family: 'Circe-Light'sans-serif;
+    font-weight: normal;
+}
+
+.devpara {
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 25px;
+    text-align: left;
+    color: #4b4b4b;
+}
+
+.devpara1 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 12px;
+    text-align: left;
+    opacity: .7;
+    padding-bottom: 2em;
+}
+
+
+/* CAROUSEL */
+
+.rounded-testimony {
+    min-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 2rem; */
+    justify-content: space-around;
+    text-align: center;
+    /* padding: 40px 20px; */
+}
+
+.testimony-avatars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #F0F0F0;
+}
+
+.avatar img {
+    text-align: center;
+}
+
+.testimony-description {
+    text-align: left;
+}
+
+.testimony-name {
+    margin-bottom: 1rem;
+    font-family: 'Circe-Regular';
+    width: 240px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: .6;
+    margin-top: 10px;
+}
+
+.rounded-testimony:hover {
+    /* transform: scaleY(1.1); */
+    cursor: pointer;
+}
+
+.carousel-testimonial {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-align: center;
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+    width: calc(300px * 8);
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+.carousel-testimonial::before,
+.carousel-testimonial::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    z-index: 2;
+}
+
+.carousel-testimonial::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 3));
+    }
+}
+
+
+/* ABOUT */
+
+.awardssecton {
+    padding: 2em;
+}
+
+.awards-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+
+/* Awards section  */
+
+.cardlogs {
+    width: 50%;
+    height: 195px;
+    position: relative;
+    cursor: pointer;
+    padding: 20px 20px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cardlogs img {
+    margin-top: 2em;
+    margin-left: 2.5em;
+    padding-top: 0 auto;
+    width: 50px;
+    position: absolute;
+}
+
+.content {
+    position: absolute;
+    /* width: 100%; */
+    width: 55%;
+    bottom: 0;
+    height: 50px;
+    padding: 0.4em 1.5em;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    color: transparent;
+    /* border: 1px solid rgba(255, 255, 255, 0.164); */
+    overflow: hidden;
+    transition: all .4s;
+}
+
+.content p {
+    font-size: 0.8em;
+    color: #808080;
+}
+
+.cardlogs:hover .content {
+    height: 150px;
+    color: #000;
+}
+
+.awardsgrids {
+    display: flex;
+    flex-wrap: wrap;
 }
