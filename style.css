@@ -609,6 +609,8 @@ details[open] summary~* {
 
 .testimony-description {
     text-align: left;
+    font-size: 20px;
+    line-height: 22px;
 }
 
 .testimony-name {
@@ -816,5 +818,172 @@ details[open] summary~* {
    Modify as content requires.
    ========================================================================== */
 
+@media screen and (min-width: 568px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+    }
+    .btns {
+        margin: auto;
+    }
+    .card-content {
+        padding: 5em;
+    }
+    .pr-sector {
+        padding: 2em;
+    }
+    .portfolio-header {
+        padding: 0;
+    }
+    .mobimg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobimg img {
+        width: 50%;
+    }
+    .services-sector {
+        padding: 5em;
+    }
+    .casesection {
+        padding: 5em;
+    }
+    .devsection {
+        padding: 5em;
+    }
+    .awardssecton {
+        padding: 5em;
+    }
+    .finalsection {
+        padding: 5em;
+    }
+}
 
-/* @media only screen and (min-width: 768px) { */
+@media screen and (min-width: 768px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+    }
+    .top-header {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .banner-text {
+        margin: auto;
+        max-width: 100%;
+    }
+    .banner cta {
+        padding: 21px 65px 21px 40px;
+    }
+    .portfolio-header {
+        font-size: 30px;
+        line-height: 42px;
+        color: #4b4b4b;
+    }
+    .pr-sector {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 5em;
+        align-items: center;
+        justify-content: center;
+    }
+    .pr-sector img {
+        width: 70%;
+    }
+    .card-content {
+        width: 70%;
+    }
+    .services-sector {
+        padding: 3em;
+    }
+    .service-header {
+        text-align: center;
+    }
+    .servpara {
+        text-align: center;
+        font-size: 22px;
+        line-height: 36px;
+    }
+    .servpara1 {
+        padding: 2em;
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .tabulars {
+        display: flex;
+        flex-direction: row;
+        padding: 3em;
+    }
+    .tab {
+        display: flex;
+        flex-direction: column;
+    }
+    .tabcontent {
+        padding: 2em;
+    }
+    .caseseperate {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .caseseperate1 {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+    .case-img img {
+        width: 100%;
+    }
+    .info-case {
+        font-size: 18px;
+        line-height: 34px;
+        opacity: .7;
+    }
+    .case-header {
+        text-align: center;
+    }
+    .casepara {
+        text-align: center;
+    }
+    .casesection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .awardsgrids {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardlogs {
+        width: 25%;
+    }
+    .cardlogs img {
+        width: 40%;
+    }
+    .finalheader {
+        font-size: 30px;
+        line-height: 42px;
+        font-family: 'Circe-Light', sans-serif;
+        color: #222;
+    }
+    .ft-word {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    .lastession {
+        padding: 5rem;
+    }
+}
