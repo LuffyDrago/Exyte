@@ -17,19 +17,14 @@ navToggle.addEventListener("click", function() {
 
 
 // ********** fixed navbar ************
-
-// const navbar = document.getElementById("nav");
-
-// window.addEventListener("scroll", function() {
-//     const scrollHeight = window.pageYOffset;
-//     const navHeight = navbar.getBoundingClientRect().height;
-//     if (scrollHeight > navHeight) {
-//         navbar.classList.add("fixed-nav");
-//     } else {
-//         navbar.classList.remove("fixed-nav");
-//     }
-
-// });
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+    const header = document.getElementById('nav')
+        // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+    if (this.scrollY >= 100) header.classList.add('scroll-header');
+    else header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
 
 
 
