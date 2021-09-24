@@ -68,9 +68,6 @@ Global Styles
     h2,
     h3,
     h4 {
-        /* letter-spacing: var(--spacing);
-    text-transform: capitalize;
-    line-height: 1.25; */
         margin-bottom: 0;
         font-weight: normal;
     }
@@ -122,7 +119,6 @@ Navbar
 */
     
     nav {
-        /* box-shadow: var(--light-shadow); */
         width: 100%;
         position: fixed;
         z-index: 10;
@@ -238,28 +234,7 @@ Navbar
             color: var(--clr-black);
         }
     }
-    /* fixed nav */
-    
-    .fixed-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: var(--clr-white);
-        box-shadow: var(--light-shadow);
-    }
-    
-    .fixed-nav .links a {
-        color: var(--clr-grey-1);
-    }
-    
-    .fixed-nav .links a:hover {
-        color: var(--clr-secondary);
-    }
-    /* .fixed-nav .links-container {
-    height: auto !important;
-  } */
-    /* BANNER SECTION */
+    /*=============== BANNER SECTION ===============*/
     
     .banner {
         padding: 5rem;
@@ -314,7 +289,7 @@ Navbar
         border-style: none;
         padding-bottom: 2em;
     }
-    /* ORTFOLIO SECTION */
+    /*=============== PORTFOLIO SECTION ===============*/
     
     .pr-sector {
         padding: 2em;
@@ -324,6 +299,7 @@ Navbar
         font-size: 30px;
         line-height: 42px;
     }
+    /*=============== ACCORDION ===============*/
     
     details {
         padding: 1rem 0;
@@ -347,11 +323,9 @@ Navbar
     
     summary {
         list-style-type: none;
-        /* position: relative; */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* padding: 1rem 0; */
         font-size: 1rem;
     }
     
@@ -369,6 +343,10 @@ Navbar
     }
     
     .deskimg {
+        display: none;
+    }
+    
+    .portfolio-header1 {
         display: none;
     }
     
@@ -402,7 +380,7 @@ Navbar
         opacity: .7;
         padding-bottom: 2em;
     }
-    /* TAB SECTION  */
+    /*===============TAB SECTION ===============*/
     
     .tab {
         overflow: hidden;
@@ -488,7 +466,7 @@ Navbar
     .lrnmore {
         color: var(--clr-black);
     }
-    /* BLOG SECTION */
+    /*=============== BLOG SECTION ===============*/
     
     .casesection {
         padding: 2em;
@@ -532,7 +510,7 @@ Navbar
         color: #000;
         padding-bottom: 1em;
     }
-    /* DEV SECTION */
+    /*=============== DEV SECTION ===============*/
     
     .devsection {
         padding: 2em;
@@ -561,17 +539,15 @@ Navbar
         opacity: .7;
         padding-bottom: 2em;
     }
-    /* CAROUSEL */
+    /*===============CARUOSEL ===============*/
     
     .rounded-testimony {
         min-width: 330px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* margin: 2rem; */
         justify-content: space-around;
         text-align: center;
-        /* padding: 40px 20px; */
     }
     
     .testimony-avatars {
@@ -680,7 +656,7 @@ Navbar
         font-size: 30px;
         line-height: 42px;
     }
-    /* Awards section  */
+    /*=============== AWARDS SECTION ===============*/
     
     .cardlogs {
         width: 50%;
@@ -796,6 +772,7 @@ Navbar
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+    /*=============== MEDIUM DEVICES  ===============*/
     
     @media screen and (min-width: 568px) {
         .banner {
@@ -965,4 +942,189 @@ Navbar
         .lastession {
             padding: 5rem;
         }
+    }
+    /*=============== LARGE DEVICES ===============*/
+    
+    @media screen and (min-width: 1024px) {
+        .banner-hero img {
+            padding-bottom: 1em;
+        }
+        #portfolio {
+            padding: 2em;
+        }
+        .pr-sector {
+            width: 100%;
+        }
+        .portfolio-header1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            line-height: 42px;
+            margin: 0 auto;
+        }
+        .portfolio-header {
+            display: none;
+        }
+        .card-content {
+            display: flex;
+            flex-direction: row;
+            gap: 4em;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .cardssflex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+        .deskimg {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobimg {
+            display: none;
+        }
+        .servpara {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            align-items: center;
+            margin-left: 10em;
+        }
+        .servpara1 {
+            width: 50%;
+            margin-left: 12em;
+            text-align: center;
+        }
+        .tabulars {
+            padding: 4em;
+        }
+        .tabcontent {
+            margin-left: 5em;
+        }
+        .casepara {
+            width: 50%;
+            padding-bottom: 1em;
+        }
+        .caseseperate {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .case-info {
+            padding: 2em;
+        }
+        .caseseperate1 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .finalsection {
+            width: 50%;
+        }
+        .lastession {
+            padding: 1em;
+        }
+        .ft-details {
+            padding: 1em;
+        }
+        .ft-nav {
+            padding: 1em;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+    }
+    /*==================== EXTRA LARGE SCREENS ====================*/
+    
+    @media screen and (min-width: 1200px) {
+        #portfolio {
+            padding: 5em;
+        }
+        .servpara {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            align-items: center;
+            margin-left: 13em;
+        }
+        .servpara1 {
+            width: 50%;
+            margin-left: 16em;
+            text-align: center;
+        }
+        .tabulars {
+            margin-left: 5em;
+        }
+    }
+    /*==================== GSAP ====================*/
+    
+    .loading-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #4b4b4b;
+    }
+    
+    .container {
+        position: relative;
+        display: flex;
+        width: 88rem;
+        align-items: center;
+    }
+    
+    .intro-logo,
+    .divider,
+    .mask,
+    .intro-heading {
+        position: absolute;
+    }
+    
+    .jsapimg img {
+        max-width: 20%;
+    }
+    
+    .intro-logo,
+    .mask {
+        left: calc(50% + 2px);
+    }
+    
+    .divider {
+        left: 50%;
+        width: 5px;
+        height: 0rem;
+        margin: 0 auto;
+        background-color: black;
+    }
+    
+    .mask {
+        z-index: 20;
+        align-self: 8rem;
+        width: 40rem;
+        height: 8rem;
+        background-color: #4b4b4b;
+    }
+    
+    .intro-heading {
+        left: 50%;
+        z-index: 30;
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 4rem;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0;
     }
