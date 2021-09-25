@@ -42,6 +42,7 @@ Global Styles
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden;
     }
     
     body {
@@ -1064,8 +1065,7 @@ Navbar
         }
     }
     /*==================== GSAP ====================*/
-    
-    .loading-screen {
+    /* .loading-screen {
         position: absolute;
         top: 0;
         left: 0;
@@ -1127,4 +1127,4 @@ Navbar
         text-align: center;
         text-transform: uppercase;
         opacity: 0;
-    }
+    } */
