@@ -4,9 +4,7 @@
 Exyte website , using HTML, CSS & JAVASCRIPT.
 Contains animations when scrolling.
 
-Includes a GSAP Animation.
-
-Also include some Javascripts mini projects  🙂
+Includes some Javascripts mini projects.
 
 Developed first with the Mobile First methodology, then for desktop.
 
